@@ -5,6 +5,7 @@
 		</head>
 		<body>
     		<button id="start"> Fetch a Degree</button>
+				<div id="jsonData"></div>
     		<script>
     				(function () {
     						  document.getElementById("start").onclick = function () { 
@@ -13,8 +14,18 @@
     						function makeRequest(url) {
     								fetch(url)
     											.then((response) => response.json())
-    											.then((data) => console.log(data));
-    						}
+    											.then((data) => getData(data));
+    						};
+								
+								function getData(data) {
+										var contentSpace = document.getElementById("jsonData");
+										for (var i=0; i<data.length; i++) {
+													var div = document.createElement("div");
+													div.innerHTML = "School: " + data[i].school;
+													contentSpace.appendChild(div);
+										}
+								
+								}
     				})();
     		</script>
 		</body>
