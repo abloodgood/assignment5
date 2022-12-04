@@ -6,8 +6,8 @@
 		<body>
     		<button id="start"> Fetch a Degree</button>
     		<script>
-    				(function buttonClick() {
-    						  document.getElementbyId("start").onclick = function buttonClick() { makeRequest("https://abloodgood.github.io/assignment5/my_degrees.json");
+    				(function () {
+    						  document.getElementbyId("start").onclick = function () { makeRequest("https://abloodgood.github.io/assignment5/my_degrees.json");
     						};
     						function makeRequest(url) {
     								fetch(url)
