@@ -13,17 +13,16 @@
     						};
     						function makeRequest(url) {
     								fetch(url)
-    											.then(response => response.json())
-    											.then((data) => getData(data));
+    											.then((response) => response.json())
+    											.then((data) => {
+          										var contentSpace = document.getElementById("jsonData");
+          										for (var i=0; i<data.length; i++) {
+          													var div = document.createElement("div");
+          													div.innerHTML = "School: " + data[i].school;
+          													contentSpace.appendChild(div);												
+													
+													});
     						};
-								
-								function getData(data) {
-										var contentSpace = document.getElementById("jsonData");
-										for (var i=0; i<data.length; i++) {
-													var div = document.createElement("div");
-													div.innerHTML = "School: " + data[i].school;
-													contentSpace.appendChild(div);
-										}
 								
 								}
     				})();
