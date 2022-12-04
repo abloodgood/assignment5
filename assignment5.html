@@ -4,7 +4,6 @@
 				<title>Assignment 5</title>
 		</head>
 		<body>
-    		<button id="start"> Fetch a Degree</button>
 				<div id="jsonData"></div>
     		<script>
 				   fetch('https://abloodgood.github.io/assignment5/my_degrees.json')
@@ -12,6 +11,7 @@
                 return response.json();
             })
             .then(function (data) {
+								console.log(data);
                 appendData(data);
             })
             .catch(function (err) {
