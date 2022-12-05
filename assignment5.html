@@ -18,10 +18,11 @@
 				return document.getElementById(id);
 			}
 			fetch('https://abloodgood.github.io/assignment5/my_degrees.json')
-			.then(res => res.json())
-			.then((res) => {
-				const data = res.data;
-				console.log(data);
+			.then(response => response.json())
+			.then(data => {
+				console.log('Success:', data)
+
+
 				getElement('school').innerHTML = "School: " + data[0].school;
 				getElement('major').innerHTML = "Major: " + data[0].major;
 				getElement('type').innerHTML = "Type: " + data[0].type;
