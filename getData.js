@@ -5,7 +5,7 @@ const getDegrees = async () => {
 			const response = await fetch(url);
 			const degree = await response.json();
 			console.log(degree);
-			console.log(degree[0]);
+			console.log(degree.length);
 };
 
 getDegrees();
