@@ -8,8 +8,8 @@ const fetchData = async () => {
 
 const getDegree = async () => {
 			const url = "https://abloodgood.github.io/assignment5/my_degrees.json"
-			const res = await fetch(url);
-			const degree = await res.json();
+			const response = await fetch(url);
+			const degree = await response.json();
 			console.log(degree);
 			displayDegree(degree);
 };
