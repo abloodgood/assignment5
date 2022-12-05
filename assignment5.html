@@ -3,7 +3,6 @@
 		<head>
 				<meta charset="UTF-8" />
 				<title>Assignment 5</title>
-				<script src="./getData.js" defer></script>
 		</head>
 		<body>
 				<div id="jsonData">
@@ -12,5 +11,21 @@
 					<p id="type"></p>
 					<p id="year"></p>
 				</div>
+
+
+		<script>
+			function getElement(id) {
+				return document.getElementById(id);
+			}
+			fetch('https://abloodgood.github.io/assignment5/my_degrees.json')
+			.then(res => res.json())
+			.then((res) => {
+				const data = res.data;
+				getElement('school').innerHTML = "School: " + data.school;
+				getElement('major').innerHTML = "Major: " + data.major;
+				getElement('type').innerHTML = "Type: " + data.type;
+				getElement('year').innerHTML = "Year Conferred: " + data.year;
+			});
+		</script>
 		</body>
 </html>

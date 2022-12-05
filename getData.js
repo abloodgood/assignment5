@@ -1,4 +1,6 @@
-const mainContainer = document.getElementById("jsonData");
+function getElement(id) {
+  return document.getElementById(id);
+}
 
 const getDegrees = async () => {
 			fetch('https://abloodgood.github.io/assignment5/my_degrees.json')
