@@ -21,7 +21,8 @@
 			.then(response => response.json())
 			.then(data => {
 				console.log('Success:', data);
-				console.log('Success:', data[0]);
+				var parseData = JSON.parse(data);
+				console.log(parseData);
 
 
 				getElement('school').innerHTML = "School: " + data[0]["Degrees"][0]['school'];
