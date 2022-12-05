@@ -1,7 +1,7 @@
 const mainContainer = document.getElementById("jsonData");
 
 const fetchData = async () => {
-		for (let i=1; 1 <= 3; i++) {
+		for (let i=1; i <= 3; i++) {
 				await getDegree(i);
 			}
 };
