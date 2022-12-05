@@ -1,12 +1,6 @@
 const mainContainer = document.getElementById("jsonData");
 
-const fetchData = async () => {
-		for (let i=1; i <= 3; i++) {
-				await getDegree(i);
-			}
-};
-
-const getDegree = async () => {
+const getDegrees = async () => {
 			const url = "https://abloodgood.github.io/assignment5/my_degrees.json"
 			const response = await fetch(url);
 			const degree = await response.json();
@@ -14,7 +8,7 @@ const getDegree = async () => {
 			displayDegree(degree);
 };
 
-fetchData();
+getDegrees();
 
 function displayDegree(degree) {
 			const degreeElement = document.createElement("div")
