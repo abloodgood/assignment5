@@ -1,12 +1,22 @@
 const mainContainer = document.getElementById("jsonData");
 
 const getDegrees = async () => {
-			const url = "https://abloodgood.github.io/assignment5/my_degrees.json"
-			const response = await fetch(url);
-			const degree = await response.json();
+			fetch('https://abloodgood.github.io/assignment5/my_degrees.json')
+			.then(res => res.json())
+			.then((res) => {
+				const data = res.data;
+				getElementById('school').innerHTML = "School: " + data.school;
+				getElementById('major').innerHTML = "Major: " + data.major;
+				getElementById('type').innerHTML = "Type: " + data.type;
+				getElementById('year').innerHTML = "Year Conferred: " + data.year;
+
+
+
+			});
+			/*
 			console.log(degree);
 			console.log(degree[0]);
-			displayDegree(degree);
+			displayDegree(degree);*/
 };
 
 getDegrees();
