@@ -3,25 +3,25 @@
       {
          "degree":{
             "school":"Drew University",
-            "Major":"Physics",
-            "Type":"BA",
-            "Year Conferred":2017
+            "major":"Physics",
+            "type":"BA",
+            "year":2017
          }
       },
       {
          "degree":{
             "school":"University of Massachusetts",
-            "Major":"Information Technology",
-            "Type":"BS",
-            "Year Conferred":2021
+            "major":"Information Technology",
+            "type":"BS",
+            "year":2021
          }
       },
       {
          "degree":{
             "school":"Boston University",
-            "Major":"Software Development",
-            "Type":"MS",
-            "Year Conferred":2024
+            "major":"Software Development",
+            "type":"MS",
+            "year":2024
          }
       }
    ]
