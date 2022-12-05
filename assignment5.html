@@ -18,10 +18,10 @@
 				return document.getElementById(id);
 			}
 			fetch('https://abloodgood.github.io/assignment5/my_degrees.json')
-			.then((response) => response.json())
-			.then((data) => {
+			.then(response => response.json())
+			.then(data => {
 				console.log('Success:', data);
-				var parsed = JSON.parse(data);
+				var parsed = JSON.stringify(data);
 				console.log(parsed);
 				console.log(parsed.Degrees);
 				console.log(parsed.Degrees.school);
