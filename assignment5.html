@@ -3,6 +3,7 @@
 		<head>
 				<meta charset="UTF-8" />
 				<title>Assignment 5</title>
+				<link href="style.css" rel="stylesheet">
 		</head>
 		<body>
 				<div id="jsonData">
@@ -10,19 +11,21 @@
 
 
 		<script>
-			fetch('https://abloodgood.github.io/assignment5/my_degrees.json')
-			.then(response => response.json())
-			.then(data => {
-				
-				var mainContainer = document.getElementById("jsonData");
-				for (var i = 0; i < 3; i++) {
-                	var div = document.createElement("div");
-                	div.innerHTML = 'School: ' + data.Degrees[i].school 
-								+ '\tMajor: ' + data.Degrees[i].major + '\tType: ' + data.Degrees[i].type
-								+ '\tYear Conferred: ' + data.Degrees[i].year;
-                mainContainer.appendChild(div);
-            	}
-			});
+			function getData() {
+				fetch('https://abloodgood.github.io/assignment5/my_degrees.json')
+				.then(response => response.json())
+				.then(data => {
+					
+					var mainContainer = document.getElementById("jsonData");
+					for (var i = 0; i < 3; i++) {
+						var div = document.createElement("div");
+						div.innerHTML = 'School: ' + data.Degrees[i].school 
+									+ '\tMajor: ' + data.Degrees[i].major + '\tType: ' + data.Degrees[i].type
+									+ '\tYear Conferred: ' + data.Degrees[i].year;
+					mainContainer.appendChild(div);
+					}
+				});
+			}
 		</script>
 		</body>
 </html>
