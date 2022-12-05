@@ -13,6 +13,7 @@ getDegrees();
 function displayDegree(degree) {
             for (var i = 0; i < degree.length; i++) {
                 var div = document.createElement("div");
+								console.log(degree[0]);
                 div.innerHTML = 'School: ' + degree[i].school 
 								+ 'Major: ' + degree[i].major + 'Type: ' + degree[i].type
 								+ 'Year Conferred: ' +degree[i].year;
