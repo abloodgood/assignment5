@@ -6,30 +6,25 @@
 		</head>
 		<body>
 				<div id="jsonData">
-					<p id="school"></p>
-					<p id="major"></p>
-					<p id="type"></p>
-					<p id="year"></p>
 				</div>
 
 
 		<script>
-			function getElement(id) {
-				return document.getElementById(id);
-			}
 			fetch('https://abloodgood.github.io/assignment5/my_degrees.json')
 			.then(response => response.json())
 			.then(data => {
 				console.log('Success:', data);
 				//console.log(data.Degrees[0].school);
 				//console.log(data.Degrees[1].school);
-
-				for(let i=0; i < 3; i++) {
-					getElement('school').innerHTML = "School: " + data.Degrees[i].school;
-					getElement('major').innerHTML = "Major: " + data.Degrees[i].major;
-					getElement('type').innerHTML = "Type: " + data.Degrees[i].type;
-					getElement('year').innerHTML = "Year Conferred: " + data.Degrees[i].year;
-				}
+				
+				var mainContainer = document.getElementById("jsonData");
+				for (var i = 0; i < degree.length; i++) {
+                	var div = document.createElement("div");
+                	div.innerHTML = 'School: ' + data.Degrees[i].school 
+								+ 'Major: ' + data.Degrees[i].major + 'Type: ' + data.Degrees[i].type
+								+ 'Year Conferred: ' + data.Degrees[i].year;
+                mainContainer.appendChild(div);
+            	}
 			});
 		</script>
 		</body>
