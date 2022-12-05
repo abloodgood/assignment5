@@ -19,12 +19,6 @@ function displayDegree(degree) {
                 mainContainer.appendChild(div);
             }
 
-			const degreeElement = document.createElement("div")
-			degreeElement.classList.add("degree");
-			const school = degree.school;
-			const major = degree.major;
-			const type = degree.type;
-			const year = degree.year;
-			mainContainer.appendChild(degreeElement);
+
 }
 
