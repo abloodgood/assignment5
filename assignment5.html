@@ -23,10 +23,10 @@
 				console.log('Success:', data)
 
 
-				getElement('school').innerHTML = "School: " + data[0].school;
-				getElement('major').innerHTML = "Major: " + data[0].major;
-				getElement('type').innerHTML = "Type: " + data[0].type;
-				getElement('year').innerHTML = "Year Conferred: " + data[0].year;
+				getElement('school').innerHTML = "School: " + data[0]["Degrees"][0]['school'];
+				getElement('major').innerHTML = "Major: " + data[0]["Degrees"][0]['major'];
+				getElement('type').innerHTML = "Type: " + data[0]["Degrees"][0]['type'];
+				getElement('year').innerHTML = "Year Conferred: " + data[0]["Degrees"][0]['year'];
 			});
 		</script>
 		</body>
