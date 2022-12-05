@@ -17,9 +17,9 @@
 				var mainContainer = document.getElementById("jsonData");
 				for (var i = 0; i < 3; i++) {
                 	var div = document.createElement("div");
-                	div.innerHTML = '\r\nSchool: ' + data.Degrees[i].school 
-								+ '\r\nMajor: ' + data.Degrees[i].major + '\r\nType: ' + data.Degrees[i].type
-								+ '\r\nYear Conferred: ' + data.Degrees[i].year;
+                	div.innerHTML = 'School: ' + data.Degrees[i].school 
+								+ '\tMajor: ' + data.Degrees[i].major + '\tType: ' + data.Degrees[i].type
+								+ '\tYear Conferred: ' + data.Degrees[i].year;
                 mainContainer.appendChild(div);
             	}
 			});
