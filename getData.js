@@ -5,9 +5,7 @@ const getDegrees = async () => {
 			const response = await fetch(url);
 			const degree = await response.json();
 			console.log(degree);
-			
-			const myData = JSON.parse(degree);
-			console.log(myData.school);
+			console.log(degree[0]);
 };
 
 getDegrees();
