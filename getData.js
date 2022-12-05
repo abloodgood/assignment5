@@ -11,6 +11,14 @@ const getDegrees = async () => {
 getDegrees();
 
 function displayDegree(degree) {
+            for (var i = 0; i < degree.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = 'School: ' + degree[i].school 
+								+ 'Major: ' + degree[i].major + 'Type: ' + degree[i].type
+								+ 'Year Conferred: ' +degree[i].year;
+                mainContainer.appendChild(div);
+            }
+
 			const degreeElement = document.createElement("div")
 			degreeElement.classList.add("degree");
 			const school = degree.school;
