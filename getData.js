@@ -5,10 +5,10 @@ const getDegrees = async () => {
 			.then(res => res.json())
 			.then((res) => {
 				const data = res.data;
-				getElementById('school').innerHTML = "School: " + data.school;
-				getElementById('major').innerHTML = "Major: " + data.major;
-				getElementById('type').innerHTML = "Type: " + data.type;
-				getElementById('year').innerHTML = "Year Conferred: " + data.year;
+				getElement('school').innerHTML = "School: " + data.school;
+				getElement('major').innerHTML = "Major: " + data.major;
+				getElement('type').innerHTML = "Type: " + data.type;
+				getElement('year').innerHTML = "Year Conferred: " + data.year;
 
 
 
