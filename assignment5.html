@@ -20,7 +20,8 @@
 			fetch('https://abloodgood.github.io/assignment5/my_degrees.json')
 			.then(response => response.json())
 			.then(data => {
-				console.log('Success:', data)
+				console.log('Success:', data);
+				console.log('Success:', data[0]);
 
 
 				getElement('school').innerHTML = "School: " + data[0]["Degrees"][0]['school'];
