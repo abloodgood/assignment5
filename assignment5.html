@@ -21,6 +21,7 @@
 			.then(res => res.json())
 			.then((res) => {
 				const data = res.data;
+				console.log(data);
 				getElement('school').innerHTML = "School: " + data[0].school;
 				getElement('major').innerHTML = "Major: " + data[0].major;
 				getElement('type').innerHTML = "Type: " + data[0].type;
