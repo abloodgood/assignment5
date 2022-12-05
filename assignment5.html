@@ -21,7 +21,8 @@
 			.then(response => response.json())
 			.then(data => {
 				console.log('Success:', data);
-				var parsed = JSON.stringify(data);
+				console.log(data.Degrees[0].school);
+				/*var parsed = JSON.stringify(data);
 				console.log(parsed);
 				console.log(parsed.Degrees);
 				console.log(parsed.Degrees.school);
@@ -30,7 +31,7 @@
 				getElement('school').innerHTML = "School: " + data[0]["Degrees"][0]['school'];
 				getElement('major').innerHTML = "Major: " + data[0]["Degrees"][0]['major'];
 				getElement('type').innerHTML = "Type: " + data[0]["Degrees"][0]['type'];
-				getElement('year').innerHTML = "Year Conferred: " + data[0]["Degrees"][0]['year'];
+				getElement('year').innerHTML = "Year Conferred: " + data[0]["Degrees"][0]['year'];*/
 			});
 		</script>
 		</body>
