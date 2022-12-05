@@ -23,10 +23,14 @@
 					for (var i = 0; i < 3; i++) {
 						var div = document.createElement("div");
 						div.classList.add("degree");
-						div.innerHTML = 'School: ' + data.Degrees[i].school 
-									+ '\tMajor: ' + data.Degrees[i].major + '\tType: ' + data.Degrees[i].type
-									+ '\tYear Conferred: ' + data.Degrees[i].year;
-					mainContainer.appendChild(div);
+						const degreeHTML = `
+						School: ${data.Degrees[i].school}\n
+						Major: ${data.Degrees[i].major}\n
+						Type: ${data.Degrees[i].type}\n
+						Year Conferred: ${data.Degrees[i].year}
+						`;
+						div.innerHTML = degreeHTML;
+						mainContainer.appendChild(div);
 					}
 				});
 			}
