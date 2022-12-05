@@ -9,7 +9,7 @@
 			<div id="jsonData">
 			</div>
 			<div class="button">
-				<button onclick="getData()">Get Degrees</button>
+				<button id="go" onclick="getData()">Get Degrees</button>
 			</div>
 
 
@@ -34,6 +34,13 @@
 					}
 				});
 			}
+
+			const go_button = document.getElementById('go');
+
+			go_button.addEventListener('click', function onClick() {
+			go_button.style.backgroundColor = 'red';
+			go_button.style.color = 'white';
+			});
 		</script>
 		</body>
 </html>
