@@ -21,10 +21,10 @@
 			.then(res => res.json())
 			.then((res) => {
 				const data = res.data;
-				getElement('school').innerHTML = "School: " + data.school;
-				getElement('major').innerHTML = "Major: " + data.major;
-				getElement('type').innerHTML = "Type: " + data.type;
-				getElement('year').innerHTML = "Year Conferred: " + data.year;
+				getElement('school').innerHTML = "School: " + data[0].school;
+				getElement('major').innerHTML = "Major: " + data[0].major;
+				getElement('type').innerHTML = "Type: " + data[0].type;
+				getElement('year').innerHTML = "Year Conferred: " + data[0].year;
 			});
 		</script>
 		</body>
