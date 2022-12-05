@@ -22,6 +22,7 @@
 					var mainContainer = document.getElementById("jsonData");
 					for (var i = 0; i < 3; i++) {
 						var div = document.createElement("div");
+						div.classList.add("degree");
 						div.innerHTML = 'School: ' + data.Degrees[i].school 
 									+ '\tMajor: ' + data.Degrees[i].major + '\tType: ' + data.Degrees[i].type
 									+ '\tYear Conferred: ' + data.Degrees[i].year;

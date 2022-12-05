@@ -25,3 +25,12 @@ button {
 	background-color: #cccaca;
 	color: blue;
 }
+
+.degree {
+    background-color: #eee;
+    border-radius: 20px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+  }
