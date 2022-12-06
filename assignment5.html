@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 		<head>
-				<meta charset="UTF-8" />
+				<meta charset="UTF-8">
 				<title>Assignment 5</title>
 				<link href="style.css" rel="stylesheet">
 		</head>
@@ -23,11 +23,13 @@
 				.then(data => {
 					//get the empty div "jsonData" to add fetched data to
 					var mainContainer = document.getElementById("jsonData");
-					//for each degree
+
+					//for each degree from the json file
 					for (var i = 0; i < data.Degrees.length; i++) {
 						//create a div and add the class "degree" to it
 						var div = document.createElement("div");
 						div.classList.add("degree");
+
 						//create a string literal for the inner HTML to add
 						const degreeHTML = `
 						<b>School:</b> ${data.Degrees[i].school} <br>
@@ -36,6 +38,7 @@
 						<b>Year Conferred:</b> ${data.Degrees[i].year}
 						`;
 						div.innerHTML = degreeHTML;
+
 						//append the new div to jsonData
 						mainContainer.appendChild(div);
 					}
