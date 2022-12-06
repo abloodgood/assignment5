@@ -6,10 +6,10 @@
 				<link href="style.css" rel="stylesheet">
 		</head>
 		<body>
-			/*empty div to add fetched json data to*/
+			<!-- empty div to add fetched json data to -->
 			<div id="jsonData">
 			</div>
-			/*define a class for the button to fetch the json degree data*/
+			<!-- define a class for the button to fetch the json degree data -->
 			<div class="button">
 				<button id="go" onclick="getData()">Get Degrees</button>
 			</div>
@@ -17,14 +17,18 @@
 		<script>
 			function getData() {
 				/*fetch json file*/
-				fetch('https://abloodgood.github.io/assignment5/my_degrees1.json')
+				fetch('https://abloodgood.github.io/assignment5/my_degrees.json')
 				.then(response => response.json())
+				//if successful, continue
 				.then(data => {
-					
+					//get the empty div "jsonData" to add fetched data to
 					var mainContainer = document.getElementById("jsonData");
-					for (var i = 0; i < 3; i++) {
+					//for each degree
+					for (var i = 0; i < data.Degrees.length; i++) {
+						//create a div and add the class "degree" to it
 						var div = document.createElement("div");
 						div.classList.add("degree");
+						//create a string literal for the inner HTML to add
 						const degreeHTML = `
 						<b>School:</b> ${data.Degrees[i].school} <br>
 						<b>Major:</b> ${data.Degrees[i].major} <br>
@@ -32,16 +36,20 @@
 						<b>Year Conferred:</b> ${data.Degrees[i].year}
 						`;
 						div.innerHTML = degreeHTML;
+						//append the new div to jsonData
 						mainContainer.appendChild(div);
 					}
 				})
+				//catch any errors and print to console
 				.catch(error => {
 					console.error('Error Encountered: ', error);
 				});
 			}
 
+			//get the "go" button
 			const go_button = document.getElementById('go');
 
+			//listen for the "onClick" event, once clicked change the color of the button
 			go_button.addEventListener('click', function onClick() {
 			go_button.style.backgroundColor = 'DarkSeaGreen';
 			go_button.style.color = 'white';
