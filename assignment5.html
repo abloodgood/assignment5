@@ -6,16 +6,18 @@
 				<link href="style.css" rel="stylesheet">
 		</head>
 		<body>
+			/*empty div to add fetched json data to*/
 			<div id="jsonData">
 			</div>
+			/*define a class for the button to fetch the json degree data*/
 			<div class="button">
 				<button id="go" onclick="getData()">Get Degrees</button>
 			</div>
 
-
 		<script>
 			function getData() {
-				fetch('https://abloodgood.github.io/assignment5/my_degrees.json')
+				/*fetch json file*/
+				fetch('https://abloodgood.github.io/assignment5/my_degrees1.json')
 				.then(response => response.json())
 				.then(data => {
 					
@@ -32,6 +34,9 @@
 						div.innerHTML = degreeHTML;
 						mainContainer.appendChild(div);
 					}
+				})
+				.catch(error => {
+					console.error('Error Encountered: ', error);
 				});
 			}
 
